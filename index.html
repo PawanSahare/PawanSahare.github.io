@@ -4,173 +4,268 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pawan Sahare | CV & Portfolio</title>
+
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
+    /* ---------- Reset ---------- */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      color: #1f2937;
+    }
+
+    /* ---------- Base ---------- */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
+      color: #1f2937;
       line-height: 1.6;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
-    h1, h2, h3 {
-      margin-bottom: 8px;
-    }
+
+    /* ---------- Typography ---------- */
     h1 {
       font-size: 32px;
+      margin-bottom: 6px;
     }
+
     h2 {
       font-size: 22px;
-      margin-top: 40px;
+      margin-top: 50px;
+      margin-bottom: 10px;
       border-bottom: 2px solid #e5e7eb;
       padding-bottom: 6px;
     }
-    p {
-      margin: 6px 0 12px 0;
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
     }
+
+    p {
+      margin: 6px 0 12px;
+    }
+
     ul {
       padding-left: 18px;
+      margin-bottom: 12px;
     }
+
+    /* ---------- Header ---------- */
     .header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      flex-wrap: wrap;
+      gap: 20px;
     }
+
     .tagline {
       font-size: 14px;
       color: #374151;
+      max-width: 600px;
     }
+
     .contact {
-      font-size: 14px;
       text-align: right;
+      font-size: 14px;
+      white-space: nowrap;
     }
+
     .contact a {
       color: #1f2937;
       text-decoration: none;
     }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Skills ---------- */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
     }
+
     .card {
       border: 1px solid #e5e7eb;
-      padding: 14px;
-      border-radius: 6px;
+      padding: 16px;
+      border-radius: 8px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    /* ---------- Projects ---------- */
+    .project {
+      margin-bottom: 18px;
+    }
+
+    /* ---------- Footer ---------- */
     .footer {
       margin-top: 60px;
       font-size: 13px;
       color: #6b7280;
       text-align: center;
     }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 640px) {
+      .header {
+        flex-direction: column;
+      }
+
+      .contact {
+        text-align: left;
+        margin-top: 10px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
 
     <!-- Header -->
-    <div class="header">
+    <section class="header">
       <div>
         <h1>Pawan Sahare</h1>
-        <p class="tagline">Mechanical Engineer | Product Design, Rendering, Space Planning, Costing | Data Analytics & CAD Automation</p>
+        <p class="tagline">
+          Mechanical Engineer | Product Design, Rendering, Space Planning & Costing |
+          Data Analytics & CAD Automation
+        </p>
       </div>
+
       <div class="contact">
         <p>India</p>
-        <p><a href="https://github.com/" target="_blank">GitHub</a> | <a href="https://linkedin.com/" target="_blank">LinkedIn</a></p>
+        <p>
+          <a href="https://github.com/" target="_blank">GitHub</a> |
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+        </p>
         <p>Email: <a href="mailto:pawan.sahare300@gmail.com">pawan.sahare300@gmail.com</a></p>
       </div>
-    </div>
+    </section>
 
     <!-- Summary -->
-    <h2>Professional Summary</h2>
-    <p>
-      Mechanical Engineer with over 5 years of experience in product design, manufacturing planning, space planning, and cost estimation within the furniture and modular systems industry. Strong background in creating production-ready documentation, optimizing designs for manufacturability, and coordinating with manufacturing teams. Currently expanding expertise into data analytics and CAD automation to improve engineering and costing workflows.
-    </p>
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Mechanical Engineer with 5+ years of experience in furniture and modular
+        product design, manufacturing planning, space planning, and cost estimation.
+        Strong focus on production-ready documentation and design optimization.
+        Currently transitioning toward data analytics and CAD automation to improve
+        engineering and costing workflows.
+      </p>
+    </section>
 
     <!-- Skills -->
-    <h2>Core Skills</h2>
-    <div class="skills-grid">
-      <div class="card">
-        <h3>Engineering & Design</h3>
-        <ul>
-          <li>SolidWorks</li>
-          <li>AutoCAD</li>
-          <li>3D Modeling & Assemblies</li>
-          <li>Product Rendering</li>
-          <li>Space Planning & Layouts</li>
-          <li>Shop & Production Drawings</li>
-        </ul>
+    <section>
+      <h2>Core Skills</h2>
+      <div class="skills-grid">
+
+        <div class="card">
+          <h3>Engineering & Design</h3>
+          <ul>
+            <li>SolidWorks & AutoCAD</li>
+            <li>3D Modeling & Assemblies</li>
+            <li>Product Rendering</li>
+            <li>Space Planning & Layouts</li>
+            <li>Shop & Production Drawings</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Manufacturing & Costing</h3>
+          <ul>
+            <li>Bill of Materials (BOM)</li>
+            <li>Product Cost Estimation</li>
+            <li>Design-to-Cost Optimization</li>
+            <li>Manufacturing Feasibility</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Data & Automation</h3>
+          <ul>
+            <li>Microsoft Excel (Advanced)</li>
+            <li>SQL (Fundamentals)</li>
+            <li>Python (Beginner – Data Analysis)</li>
+            <li>VBA (Beginner)</li>
+            <li>CAD & Excel Automation Concepts</li>
+          </ul>
+        </div>
+
       </div>
-      <div class="card">
-        <h3>Manufacturing & Costing</h3>
-        <ul>
-          <li>Bill of Materials (BOM)</li>
-          <li>Product Cost Estimation</li>
-          <li>Design-to-Cost Optimization</li>
-          <li>Manufacturing Feasibility</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Data & Automation</h3>
-        <ul>
-          <li>Microsoft Excel (Advanced)</li>
-          <li>SQL (Fundamentals)</li>
-          <li>Python (Beginner – Data Analysis)</li>
-          <li>VBA (Beginner)</li>
-          <li>CAD & Excel Automation Concepts</li>
-        </ul>
-      </div>
-    </div>
+    </section>
 
     <!-- Experience -->
-    <h2>Professional Experience</h2>
-    <p><strong>New Product Designer – Opal Furnitech</strong> (Aug 2023 – Present)</p>
-    <ul>
-      <li>Design and development of furniture products across home and office categories.</li>
-      <li>Preparation of 3D models, detailed drawings, and BOMs for manufacturing.</li>
-      <li>Cost estimation and optimization to improve product efficiency.</li>
-    </ul>
+    <section>
+      <h2>Professional Experience</h2>
 
-    <p><strong>Manufacturing Planner / Furniture Designer – Touchwood Furnitech</strong> (Apr 2022 – Aug 2023)</p>
-    <ul>
-      <li>Space planning, layout drawings, and shop drawings for modular furniture.</li>
-      <li>Production planning and coordination with manufacturing teams.</li>
-    </ul>
+      <p><strong>New Product Designer – Opal Furnitech</strong> (Aug 2023 – Present)</p>
+      <ul>
+        <li>Designed and developed new furniture products across home and office categories.</li>
+        <li>Created detailed 3D models, assemblies, and production-ready drawings using SolidWorks and AutoCAD.</li>
+        <li>Prepared accurate Bill of Materials (BOM) for manufacturing and procurement.</li>
+        <li>Performed product cost estimation and design-to-cost optimization to improve margins.</li>
+        <li>Collaborated with production teams to ensure manufacturability, quality, and timely execution.</li>
+      </ul>
 
-    <p><strong>Product Designer – Novitas & Prolixus</strong> (Jun 2018 – Mar 2020)</p>
-    <ul>
-      <li>Product design and detailing for furniture systems.</li>
-      <li>Support for prototyping and production documentation.</li>
-    </ul>
+      <p><strong>Manufacturing Planner / Furniture Designer – Touchwood Furnitech</strong> (Apr 2022 – Aug 2023)</p>
+      <ul>
+        <li>Prepared space planning layouts and modular furniture configurations based on client requirements.</li>
+        <li>Generated shop drawings, cutting plans, and production documentation for factory use.</li>
+        <li>Planned manufacturing workflows and coordinated with production teams for smooth execution.</li>
+        <li>Created and maintained BOMs and assisted in material planning and cost estimation.</li>
+        <li>Supported process improvements to reduce rework and improve production efficiency.</li>
+      </ul>
+
+      <p><strong>Product Designer – Novitas & Prolixus</strong> (Jun 2018 – Mar 2020)</p>
+      <ul>
+        <li>Designed furniture products and systems for residential and commercial applications.</li>
+        <li>Developed 3D models, detailed drawings, and technical documentation.</li>
+        <li>Assisted in prototyping, product testing, and design validation.</li>
+        <li>Worked closely with manufacturing teams to resolve design and production issues.</li>
+      </ul>
+    </section>
 
     <!-- Projects -->
-    <h2>Selected Projects</h2>
-    <p><strong>Furniture Costing Application (In Progress)</strong></p>
-    <ul>
-      <li>Logic-based system to automate furniture costing using dimensions, materials, and BOM data.</li>
-      <li>Focus on reducing manual errors and improving repeatability.</li>
-    </ul>
+    <section>
+      <h2>Selected Projects</h2>
 
-    <p><strong>Design & Drafting Portfolio</strong></p>
-    <ul>
-      <li>3D models, renderings, space planning layouts, and production-ready drawings.</li>
-    </ul>
+      <div class="project">
+        <strong>Furniture Costing Application (In Progress)</strong>
+        <ul>
+          <li>Logic-based system to automate furniture costing using dimensions,
+              materials, and BOM data.</li>
+        </ul>
+      </div>
 
-    <p><strong>Data Analytics Practice Projects</strong></p>
-    <ul>
-      <li>Manufacturing and costing datasets for analysis, reporting, and insights.</li>
-    </ul>
+      <div class="project">
+        <strong>Design & Drafting Portfolio</strong>
+        <ul>
+          <li>3D models, renderings, space planning layouts, and production-ready drawings.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <strong>Data Analytics Practice Projects</strong>
+        <ul>
+          <li>Manufacturing and costing datasets for analysis and reporting.</li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Footer -->
     <div class="footer">
-      <p>© Pawan Sahare | Single Page CV & Portfolio</p>
+      © Pawan Sahare | Single Page CV & Portfolio
     </div>
 
   </div>
